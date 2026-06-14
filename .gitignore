@@ -1,7 +1,29 @@
+# =========================================================================
+# CAPSTONE ADDITIONS: EV BATTERY REPOSITORY DATA CONTROLS
+# =========================================================================
+
+# 1. Ignore Local Virtual Environments
 venv/
+.venv/
+.venv-1/
+
+# 2. Ignore Python, Operating System, and Notebook Cache Logs
 __pycache__/
+*.py[cod]
 .ipynb_checkpoints/
-data/raw/*
-data/processed/*
-models/*
+.pytest_cache/
+.DS_Store
+Thumbs.db
+
+# 3. Ignore Configuration Environment Variables (Contains Secret Keys)
 .env
+
+# 4. Ignore Massive Local Raw Datasets 
+data/raw/
+
+# 5. Handle Processed Data Directory (Excludes datasets but allows the Dashboard Image)
+data/processed/*
+!data/processed/final_report_dashboard.png
+
+# 6. Ignore Heavy Machine Learning & Deep Learning Binary Weights
+models/*
